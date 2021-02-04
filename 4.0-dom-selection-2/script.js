@@ -17,8 +17,8 @@
 
 
 // document.getElementsByClassName() -> HTMLCollection
-// const p1 = document.getElementsByClassName('p1')[0];
-// p1.innerHTML = 'ini diubah dari javascript';
+const p1 = document.getElementsByClassName('p1')[0];
+// p1.innerHTML = 'ini diubah dari javascript'; 
 
 
 // DOM Selection 2

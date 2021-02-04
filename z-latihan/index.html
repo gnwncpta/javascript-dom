@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .container {
+            margin: 200px auto;
+            display: grid;
+            grid-template-columns: minmax(auto-fit, 700px);
+            grid-template-rows: .5fr;
+            justify-content: center;
+            align-content: center;
+            height: 50vh;
+        }
+
+        .warning {
+            padding: 20px;
+            box-sizing: border-box;
+            border: 5px solid rgb(255, 128, 128);
+            background-color: rgb(241, 64, 64);
+            border-radius: 10px;
+        }
+
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            
+        }
+
+        .header > h4 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .header > p {
+            font-weight: 100;
+            font-size: 1em;
+        }
+
+        .paragraph p {
+            font-weight: 100;
+            font-size: 1em;
+        }
+
+        .paragraph p.data{
+            margin-bottom: 20px;
+        }
+
+        .footer{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 10px 0;
+            margin-top: 20px;
+            box-sizing: border;
+            /* border: 1px solid white; */
+        }
+
+        .text-black {
+            color: black;
+        }
+
+        @media (max-width: 700px){
+            .warning {
+                max-width: 500px;
+                margin: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+
+        <section class="warning">
+            <div class="header">
+                <h4 id="warning">Warning!</h4>
+                <p class="data">Data May Leaks!!</p>
+            </div>
+
+            <div class="paragraph">
+                <p>Some data may leaks because open on port 22.</p>
+                <p>Please close the port before the data has been stored to another person.</p>
+                <div class="footer">
+                    <p>Closed port 80</p>
+                    <p>Data::Stored</p>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
